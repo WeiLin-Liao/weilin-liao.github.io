@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.8.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>给hexo博客添加Live2d小人 - Reself&#39;s Blog</title>
+
+
+    <meta name="description" content="昨天看到旁边的同事在美化自己的博客，看到他在搞这个，还挺好看的，所以现在刚好有时间也折腾了一下">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给hexo博客添加Live2d小人">
+<meta property="og:url" content="https://weilin-liao.github.io/passages/2019/05/26/给hexo博客添加Live2d小人/index.html">
+<meta property="og:site_name" content="Reself&#39;s Blog">
+<meta property="og:description" content="昨天看到旁边的同事在美化自己的博客，看到他在搞这个，还挺好看的，所以现在刚好有时间也折腾了一下">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://weilin-liao.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2021-02-04T05:23:37.533Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给hexo博客添加Live2d小人">
+<meta name="twitter:description" content="昨天看到旁边的同事在美化自己的博客，看到他在搞这个，还挺好看的，所以现在刚好有时间也折腾了一下">
+<meta name="twitter:image" content="https://weilin-liao.github.io/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="https://weilin-liao.github.io/atom.xml" title="给hexo博客添加Live2d小人" type="application/atom+xml">
+
+
+
+<link rel="icon" href="https://reself.oss-cn-beijing.aliyuncs.com/coding.me/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?ec4eaf61708cd4dae370f4288ca7b26a";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="https://reself.oss-cn-beijing.aliyuncs.com/coding.me/logo.png" alt="给hexo博客添加Live2d小人" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://mp.weixin.qq.com/s/1tmZ6L0p4VC2eV7pRHG3sw">
+                        
+                        <i class="fab fa-weixin"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Suche" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-26T03:40:54.000Z">2019-05-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端笔记/">前端笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 lesen (Über 800 Worte)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" default-id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> Besuche
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                给hexo博客添加Live2d小人
+            
+        </h1>
+        <div class="content">
+            <p>昨天看到旁边的同事在美化自己的博客，看到他在搞这个，还挺好看的，所以现在刚好有时间也折腾了一下</p>
+<a id="more"></a>
+<h3 id="一、安装hexo-helper-live2d插件"><a href="#一、安装hexo-helper-live2d插件" class="headerlink" title="一、安装hexo-helper-live2d插件"></a>一、安装hexo-helper-live2d插件</h3><p>现在假设你已经又一个使用<code>hexo</code>搭建的博客，然后我们安装<a href="https://github.com/EYHN/hexo-helper-live2d">hexo-helper-live2d</a>模块</p>
+<p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">hexo-helper-live2d官方中文文档</a></p>
+<blockquote>
+<p>npm install –save hexo-helper-live2d</p>
+</blockquote>
+<h3 id="二、添加配置文件"><a href="#二、添加配置文件" class="headerlink" title="二、添加配置文件"></a>二、添加配置文件</h3><p>在<code>hexo</code>博客到<code>_config.yml</code>文件添加以下配置<br>建议在根目录下的<code>_config.yml</code>配置，这样以后换了主题就不用重新配置了<br>当然也可以在<code>themes</code>下的<code>_config.yml</code>配置但是要注意模型目录要填写正确</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span>  <span class="comment"># 是否启动</span></span><br><span class="line"><span class="attr">  scriptFrom:</span> <span class="string">local</span> <span class="comment"># 默认</span></span><br><span class="line"><span class="attr">  pluginRootPath:</span> <span class="string">live2dw/</span>  <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line"><span class="attr">  pluginJsPath:</span> <span class="string">lib/</span>  <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line"><span class="attr">  pluginModelPath:</span> <span class="string">assets/</span>  <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line"><span class="attr">  tagMode:</span> <span class="literal">false</span>  <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line"><span class="attr">  debug:</span> <span class="literal">false</span>  <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line"><span class="attr">  model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget</span>  <span class="comment">## 模型文件</span></span><br><span class="line"><span class="attr">  display:</span></span><br><span class="line"><span class="attr">    position:</span> <span class="string">right</span> <span class="comment"># 定位方向 left right top bottom</span></span><br><span class="line"><span class="attr">    width:</span> <span class="number">150</span>  <span class="comment"># 小人宽度</span></span><br><span class="line"><span class="attr">    height:</span> <span class="number">300</span> <span class="comment">#  小人高度</span></span><br><span class="line"><span class="attr">    hOffset:</span> <span class="bullet">-15</span>  <span class="comment"># 向👇偏移</span></span><br><span class="line"><span class="attr">    vOffset:</span> <span class="bullet">-15</span>  <span class="comment"># 像👈偏移</span></span><br><span class="line"><span class="attr">  mobile:</span></span><br><span class="line"><span class="attr">    show:</span> <span class="literal">true</span>  <span class="comment"># 手机端是否显示</span></span><br><span class="line"><span class="attr">  react:</span></span><br><span class="line"><span class="attr">    opacity:</span> <span class="number">0.7</span>  <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、修改你喜欢的模型"><a href="#三、修改你喜欢的模型" class="headerlink" title="三、修改你喜欢的模型"></a>三、修改你喜欢的模型</h3><p>你可以在<a href="https://huaji8.top/post/live2d-plugin-2.0/">这里</a>找到你喜欢的模型<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">live2d-widget-model-chitose</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-epsilon2_1</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-gf</span></span><br><span class="line">live2d-widget-model-haru/01 (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)</span><br><span class="line"><span class="selector-tag">live2d-widget-model-haruto</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-hibiki</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-hijiki</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-izumi</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-koharu</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-miku</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-ni-j</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-nico</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-nietzsche</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-nipsilon</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-nito</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-shizuku</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-tororo</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-tsumiki</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-unitychan</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-wanko</span></span><br><span class="line"><span class="selector-tag">live2d-widget-model-z16</span></span><br></pre></td></tr></table></figure></p>
+<p>然后通过<code>npm install npm install --save live2d-widget-model-xxx</code>来安装你喜欢的模型<br>比方说作者喜欢的是<code>koharu</code>这个那就使用<code>npm install npm install --save live2d-widget-model-koharu</code>进行安装</p>
+<p>安装后我们在<code>node_modules</code>目录下面找到<code>live2d-widget-model-koharu</code>这个文件夹，把这个文件夹复制下来<br>找到我们的<code>hexo</code>博客的根目录(因为我们是在根目录的<code>_config.yml</code>里添加的配置)新建一个文件夹叫做<code>live2d_models</code>，把刚刚我们复制的文件粘贴过来，这样我们就完成了<code>99%</code>，最后我们打开添加的配置文件，找到这一行<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget</span>  <span class="comment">## 模型文件</span></span><br></pre></td></tr></table></figure></p>
+<p>把<code>use</code>后面改成我们复制在<code>live2d_models</code>文件夹里面的模型目录名称，这样我们就完成了修改使用<code>hexo d || hexo deploy</code>来部署，然后清除一下浏览器缓存，打开后就可以发现我们添加的小人已经在屏幕右下角看着你了。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/passages/2019/06/14/js+thinkphp 实现jsonp/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">js+thinkphp 实现jsonp跨越</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/passages/2019/03/16/使用git推送项目至远程仓库GitHub/">
+                <span class="level-item">使用git推送项目至远程仓库GitHub教程</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Kommentare</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: true,
+        verify: false,
+        app_id: 'Ona8XeG5f2NCmDGpXvvxLAJD-gzGzoHsz',
+        app_key: 'XXvHArVnSCUvvSMN5oY3IXOv',
+        placeholder: '说点什么呢？'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded image is-128x128" src="https://reself.oss-cn-beijing.aliyuncs.com/coding.me/avatar.png" alt="Weilin Liao">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Weilin Liao
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Always believe that the best things are about to happen!
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Ganzhou,Jiangxi</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            10
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Kategorien
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            4
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            10
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/weilin-liao" target="_blank" rel="noopener">
+                Folgen</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/weilin-liao">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Email" href="email:reselfs@protonmail.com">
+                
+                <i class="fas fa-mail-bulk"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Zhihu" href="https://www.zhihu.com/people/Reselfs/activities">
+                
+                <i class="fab fa-zhihu"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Git/">
+                        <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JSONP/">
+                        <span class="tag">JSONP</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Life/">
+                        <span class="tag">Life</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Linux/">
+                        <span class="tag">Linux</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Npm/">
+                        <span class="tag">Npm</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Thinkphp/">
+                        <span class="tag">Thinkphp</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Vue/">
+                        <span class="tag">Vue</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/小程序/">
+                        <span class="tag">小程序</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/面试题/">
+                        <span class="tag">面试题</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://liuqiangniubi.github.io/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Fluoxetine&#39;s</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">liuqiangniubi.github.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Letzte Einträge
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/passages/2021/02/04/Hexo主题themes-文件夹无法提交到GitHub的解决方法/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo主题themes/ 文件夹无法提交到GitHub的解决方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-02-04T05:11:34.000Z">2021-02-04</time></div>
+                    <a href="/passages/2021/02/04/Hexo主题themes-文件夹无法提交到GitHub的解决方法/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo主题themes/ 文件夹无法提交到GitHub的解决方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/解决方案/">解决方案</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/05/28/解决小程序动态改变swiper数据位置被记录问题/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决小程序动态改变swiper数据位置被记录问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-28T02:13:00.000Z">2020-05-28</time></div>
+                    <a href="/passages/2020/05/28/解决小程序动态改变swiper数据位置被记录问题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决小程序动态改变swiper数据位置被记录问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/解决方案/">解决方案</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/04/04/总结一下这几天遇到的面试题/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="总结一下这几天遇到的面试题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T03:20:01.000Z">2020-04-04</time></div>
+                    <a href="/passages/2020/04/04/总结一下这几天遇到的面试题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">总结一下这几天遇到的面试题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/面试题归纳/">面试题归纳</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/04/02/vuex学习笔记/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vuex学习笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-02T03:40:54.000Z">2020-04-02</time></div>
+                    <a href="/passages/2020/04/02/vuex学习笔记/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vuex学习笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端笔记/">前端笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/02/05/单招数学-集合与集合的概念/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="单招数学-集合与集合的概念">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T14:20:01.000Z">2020-02-05</time></div>
+                    <a href="/passages/2020/02/05/单招数学-集合与集合的概念/" class="title has-link-black-ter is-size-6 has-text-weight-normal">单招数学-集合与集合的概念</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/童话深林/">童话深林</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archive
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Letzte Einträge
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/passages/2021/02/04/Hexo主题themes-文件夹无法提交到GitHub的解决方法/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo主题themes/ 文件夹无法提交到GitHub的解决方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-02-04T05:11:34.000Z">2021-02-04</time></div>
+                    <a href="/passages/2021/02/04/Hexo主题themes-文件夹无法提交到GitHub的解决方法/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo主题themes/ 文件夹无法提交到GitHub的解决方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/解决方案/">解决方案</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/05/28/解决小程序动态改变swiper数据位置被记录问题/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决小程序动态改变swiper数据位置被记录问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-28T02:13:00.000Z">2020-05-28</time></div>
+                    <a href="/passages/2020/05/28/解决小程序动态改变swiper数据位置被记录问题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决小程序动态改变swiper数据位置被记录问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/解决方案/">解决方案</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/04/04/总结一下这几天遇到的面试题/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="总结一下这几天遇到的面试题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T03:20:01.000Z">2020-04-04</time></div>
+                    <a href="/passages/2020/04/04/总结一下这几天遇到的面试题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">总结一下这几天遇到的面试题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/面试题归纳/">面试题归纳</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/04/02/vuex学习笔记/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="vuex学习笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-02T03:40:54.000Z">2020-04-02</time></div>
+                    <a href="/passages/2020/04/02/vuex学习笔记/" class="title has-link-black-ter is-size-6 has-text-weight-normal">vuex学习笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端笔记/">前端笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/passages/2020/02/05/单招数学-集合与集合的概念/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="单招数学-集合与集合的概念">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T14:20:01.000Z">2020-02-05</time></div>
+                    <a href="/passages/2020/02/05/单招数学-集合与集合的概念/" class="title has-link-black-ter is-size-6 has-text-weight-normal">单招数学-集合与集合的概念</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/童话深林/">童话深林</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archive
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="https://reself.oss-cn-beijing.aliyuncs.com/coding.me/logo.png" alt="给hexo博客添加Live2d小人" height="28">
+                
+                </a>
+                <p class="is-size-7">&copy; 2018 - 
+                    2021 
+                    Reself&#39;s&nbsp;All Rights Reserved. 
+                </p>
+                
+                    <span default-id="busuanzi_container_site_uv">
+                        Von <span id="busuanzi_value_site_uv">0</span> Nutzern besucht
+                    </span>
+                
+                <p id="website-time" class="is-size-7"></p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-cn");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://weilin-liao.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+
+
+
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+<script>
+    (function () {
+        var BirthDay = new Date("2019-03-10");
+        window.setInterval(function() {
+            var today = new Date();
+            var timeold = (today.getTime() - BirthDay.getTime());
+            var msPerDay = 24 * 60 * 60 * 1000;
+            var e_daysold = timeold / msPerDay;
+            var daysold = Math.floor(e_daysold);
+            var e_hrsold = (e_daysold - daysold) * 24;
+            var hrsold = Math.floor(e_hrsold);
+            var e_minsold = (e_hrsold - hrsold) * 60;
+            var minsold = Math.floor((e_hrsold - hrsold) * 60);
+            var seconds = Math.floor((e_minsold - minsold) * 60);
+            $('#website-time').html("This blog has been run: " + daysold + " days " + hrsold + " hours " + minsold + " minutes " + seconds + " seconds.");
+        }, 1000);
+    }())
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1276450709";
+    script.onload = function () {
+        document.body.appendChild(script)
+    }
+</script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Tippen Sie etwas..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Seiten',
+                CATEGORIES: 'Kategorien',
+                TAGS: 'Tags',
+                UNTITLED: '(Unbenannt)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-30},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
