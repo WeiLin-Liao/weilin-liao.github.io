@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://weilin-liao.github.io/"/>
-  <updated>2021-02-10T08:43:53.424Z</updated>
+  <updated>2021-03-28T04:59:12.581Z</updated>
   <id>https://weilin-liao.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>宝塔一键迁移-请先安装Pure-Ftpd</title>
+    <link href="https://weilin-liao.github.io/passages/2021/03/09/%E5%AE%9D%E5%A1%94%E4%B8%80%E9%94%AE%E8%BF%81%E7%A7%BB-%E8%AF%B7%E5%85%88%E5%AE%89%E8%A3%85Pure-Ftpd/"/>
+    <id>https://weilin-liao.github.io/passages/2021/03/09/%E5%AE%9D%E5%A1%94%E4%B8%80%E9%94%AE%E8%BF%81%E7%A7%BB-%E8%AF%B7%E5%85%88%E5%AE%89%E8%A3%85Pure-Ftpd/</id>
+    <published>2021-03-09T05:49:34.000Z</published>
+    <updated>2021-03-28T04:59:12.581Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一下宝塔一键迁移 提示请先安装Pure-Ftpd问题<br>查了下没有找到合适的解决方法 后面自己尝试决绝的</p><p><img src="https://reself.oss-cn-beijing.aliyuncs.com/uploads/articles/2021/03/09/314b41bd169812cf8174f5e72dad4713-13-43-21-a71ae5.png" alt=""></p><a id="more"></a><p>提示这个 直接在另一台服务器安装 <code>FileZilla Server</code> 即可</p><p><img src="https://reself.oss-cn-beijing.aliyuncs.com/uploads/articles/2021/03/09/92fdb52cd662378a7ccbb5df3f2bf514-13-54-07-16f9b7.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下宝塔一键迁移 提示请先安装Pure-Ftpd问题&lt;br&gt;查了下没有找到合适的解决方法 后面自己尝试决绝的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://reself.oss-cn-beijing.aliyuncs.com/uploads/articles/2021/03/09/314b41bd169812cf8174f5e72dad4713-13-43-21-a71ae5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="解决方案" scheme="https://weilin-liao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+      <category term="服务器迁移" scheme="https://weilin-liao.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/"/>
+    
+    
+      <category term="宝塔" scheme="https://weilin-liao.github.io/tags/%E5%AE%9D%E5%A1%94/"/>
+    
+  </entry>
   
   <entry>
     <title>本博客Icaru主题已升级到4.0版本</title>
